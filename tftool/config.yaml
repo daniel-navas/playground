@@ -1,0 +1,93 @@
+days: 3
+server:
+  # - LAN
+  # - NA
+  # - LAS
+  # - BR
+  # - EUW
+  # - EUNE
+  # - TR
+  # - RU
+  # - ME
+  # - KR
+  # - JP
+  # - TW
+  # - VN
+  # - SEA
+  # - OCE
+rank:
+  # - IRON
+  # - BRONZE
+  # - SILVER
+  - GOLD
+  - PLATINUM
+  - EMERALD
+  - DIAMOND
+  - MASTER
+  - GRANDMASTER
+  - CHALLENGER
+difficulty:
+  - Easy
+  - Medium
+  # - Hard
+max_avg_place: 4.5
+limit: 6
+exclude_emblem_comps: true
+# TODO: Remove or relax this temporary filter once MetaTFT fixes augment/tag signals
+# for duplicate-unit comps (required augment tags, situational tags, or augment lists).
+exclude_repeated_units_comps: true
+# objective: climb | first | safe
+objective: first
+columns:
+  avg: true
+  win_rate: true
+  top4_rate: true
+  pick_rate: true
+  performance: false
+  availability: true
+  score: true
+  games: false
+season_unlockables_filter_enabled: true
+season_unlockables:
+  units:
+    # - Bard
+    # - Blitzcrank
+    # - Fiora
+    - Graves
+    # - Jhin
+    # - Shen
+    # - Sona
+    - Vex
+    # - Aurelion Sol
+    # - Corki
+    # - Karma
+    # - Kindred
+    # - LeBlanc
+    # - Master Yi
+    # - Nami
+    # - Riven
+    # - Xayah
+    # - Aurora
+    # - Fizz
+    # - Kai'Sa
+    # - Lulu
+    - Miss Fortune
+    # - Rhaast
+    # - Samira
+    # - Urgot
+    # - Viktor
+    # - Ezreal
+  traits:
+    - "Anima 6"
+    # - "Arbiter 3"
+    # - "Dark Star 6"
+    - "Fateweaver 4"
+    - "Mecha 6"
+    # - "Meeple 7"
+    # - "N.O.V.A. 5"
+    - "Primordian 3"
+    # - "Psionic 4"
+    - "Shepherd 7"
+    - "Space Groove 7"
+    - "Stargazer 5"
+    # - "Timebreaker 4"
