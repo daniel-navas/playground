@@ -1,33 +1,53 @@
-# Instructions for Codex
+# Instructions for AI Agents
 
-All project files must be written in English.
+All project files must be written in English, including file names, code,
+comments, documentation, UI copy, commit messages, and test names. The owner may
+speak Spanish and use voice dictation. Infer likely transcription errors from
+context before asking for clarification.
 
-This includes file names, folder names, code, comments, documentation, UI copy, commit messages, test names, and any generated project text.
+## Start Here
 
-The user may speak Spanish in chat, but files in the repository must stay in English.
+For non-trivial work, read:
 
-The user may use voice dictation. If a request has odd wording or likely transcription mistakes, infer the most likely meaning from context before asking for clarification.
+1. `docs/project.md` for purpose, scope, and constraints.
+2. `docs/ai-context.md` for the current working state.
+3. `docs/quality.md` for verification expectations.
+4. Relevant exercise-local context and `docs/decisions/` when needed.
 
-This repository is a personal playground for small experiments and mini-projects. Keep root-level context light and route project-specific knowledge to each mini-project.
+## Working Principles
 
-For non-trivial work, read `docs/ai-context.md` first, then read the relevant mini-project context listed there.
+- Optimize for quickly writing and running code during live coding interviews.
+- Start individual work in a named copy of `ts-blueprint/` or `py-blueprint/`.
+  Keep blueprints clean and exercise files local to their own block.
+- Make the smallest coherent change that meets the current request.
+- Treat an explicit implementation request as authorization to proceed within
+  scope. Ask only when a missing decision materially affects the result.
+- Before important changes, explain in one sentence what will be touched and why.
+- Preserve the owner's current exercise and unrelated local changes. Never reset
+  scratch files or delete an exercise without clear permission.
+- Prefer one way to run each language. Give a single highlighted command for the
+  relevant file, run from the repository root.
+- Do not change entrypoints or imports merely to accommodate an incorrect run
+  command. Explain the correct command instead.
+- Avoid dependencies, abstractions, and infrastructure for hypothetical needs.
+- Use `rg` for search and `apply_patch` for manual edits.
+- Keep answers concise and verify claims before reporting success.
 
-Each mini-project should keep its durable AI handoff context in `docs/ai-context.md` inside that mini-project folder.
+## Durable Project Memory
 
-Use `docs/decisions/` for repository-level decisions. Use `<mini-project>/docs/decisions/` for decisions that belong to one mini-project.
+Repository files are the handoff between chats:
 
-Keep context files updated when durable behavior, workflow expectations, scoring rules, configuration surfaces, or project direction changes.
+- `docs/project.md`: stable purpose, supported workflow, and constraints.
+- `docs/ai-context.md`: short current-state index and handoff notes.
+- `docs/quality.md`: proportional verification policy.
+- `docs/decisions/`: consequential decisions and rationale.
+- `<exercise>/docs/ai-context.md`: exercise-specific context, only when useful.
 
-Preserve user intent and the current project vibe. Keep configuration surfaces simple and centralized.
+Keep documentation oriented toward agents continuing the work. A public-facing
+project presentation is unnecessary. Keep the README as a short entrypoint.
+Update the authoritative source when behavior changes; avoid duplicating rules
+or recording a chronological diary. Store reusable lessons from owner corrections
+in the narrowest appropriate source. Do not rely on another chat's history.
 
-When giving run instructions, prefer extremely short answers with a single clearly highlighted command.
-
-Do not change entrypoints or import styles just to match how the user ran a script. Tell them the correct command to run from the repository root.
-
-Prefer one way to do each thing: one config source, one run command, one workflow. If the user specifies a way, use that; otherwise choose the single best way and avoid adding overlapping alternatives.
-
-Before important changes, explain in one sentence what will be touched and why.
-
-Use `rg` for search. Use `apply_patch` for manual edits.
-
-Do not make destructive changes without clear permission from the user.
+During a live coding exercise, follow the requested level of assistance. Do not
+expand the problem, replace the owner's approach, or solve beyond the request.

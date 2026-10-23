@@ -1,22 +1,18 @@
-# Python Playground
+# Playground
 
-Python project used as a playground for small experiments and mini-projects.
+Personal workspace for live coding interviews and quick language experiments.
+TypeScript is the default; Python is also available.
 
-## AI context
+| Language | Copy this folder | Run your copy from the repository root |
+| --- | --- | --- |
+| TypeScript (Node.js 24) | `ts-blueprint/` | `node my-interview/main.ts` |
+| Python 3 | `py-blueprint/` | `python3 my-interview/main.py` |
 
-- Repository instructions: `AGENTS.md`
-- Repository context and mini-project index: `docs/ai-context.md`
-- TFTOOL context: `tftool/docs/ai-context.md`
+Copy a blueprint folder, rename the copy, and edit its `main` file. Each copy
+starts with Hello World and is independent of other interviews or experiments.
+For example: `cp -R ts-blueprint my-interview`.
+No dependency installation or build step is needed. Keep blueprints clean;
+write exercise code in copies. `veridooh/` is an existing independent exercise.
 
-## Quick start
-
-Create and activate virtual environment
-python3 -m venv .venv  
-source .venv/bin/activate
-
-Install dependencies inside the venv  
-pip install --upgrade pip  
-pip install -r requirements.txt
-
-Run TFTOOL from the repository root  
-python3 tftool.py
+Agents: start with `AGENTS.md`, then read `docs/project.md`,
+`docs/ai-context.md`, and `docs/quality.md`.
